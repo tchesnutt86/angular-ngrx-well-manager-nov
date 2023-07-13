@@ -1,0 +1,14 @@
+<ul>
+  <li
+    (click)="select('/explore')"
+    [class.selected]="selectedMenu === 'explore'"
+  >
+    <span> Explore Wells</span>
+  </li>
+  <li
+    (click)="select('/add-new')"
+    [class.selected]="selectedMenu === 'add-new'"
+  >
+    <span> Add New Well</span>
+  </li>
+</ul>

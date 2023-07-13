@@ -1,0 +1,21 @@
+<form [formGroup]="formGroup">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" />
+    <mat-error>Required</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Operator</mat-label>
+    <mat-select formControlName="operator">
+      <mat-option *ngFor="let operator of operators" [value]="operator">{{
+        operator
+      }}</mat-option>
+    </mat-select>
+    <mat-error>Required</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Location</mat-label>
+    <input matInput formControlName="location" />
+    <mat-error>Required</mat-error>
+  </mat-form-field>
+</form>

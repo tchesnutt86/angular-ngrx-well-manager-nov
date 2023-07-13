@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Edit Well</h2>
+<mat-dialog-content
+  ><app-well-detail #wellDetail [well]="well"> </app-well-detail
+></mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>CANCEL</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="wellDetail.well">SAVE</button>
+</mat-dialog-actions>

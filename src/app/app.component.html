@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Well Manager</span>
+</mat-toolbar>
+<mat-drawer-container class="container">
+  <mat-drawer class="menu-drawer" #drawer mode="side" [opened]="true">
+    <app-menu></app-menu>
+  </mat-drawer>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

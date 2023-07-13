@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+  margin-block: unset;
+  margin-inline-start: unset;
+  padding-inline-start: unset;
+
+  li {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    cursor: pointer;
+
+    &.selected {
+      background: #d0c6f5;
+    }
+  }
+}

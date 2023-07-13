@@ -1,0 +1,17 @@
+<div class="header">
+  <h2>Explore Wells</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Search</mat-label>
+    <input matInput [(ngModel)]="searchFilterText" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+<div *ngIf="!filteredWellsCount">No wells to display.</div>
+<div class="card-container">
+  <app-well-card
+    *ngFor="let well of searchFilter(wells$ | async)"
+    [well]="well"
+    (cardClick)="openEditDialog(well)"
+    (deleteClick)="openDeleteDialog($event)"
+  ></app-well-card>
+</div>

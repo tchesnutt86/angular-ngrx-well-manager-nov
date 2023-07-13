@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-header>
+    <h2>Add New Well</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <app-well-detail #wellDetail></app-well-detail>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" (click)="saveClicked(wellDetail.well)" [disabled]="wellDetail.formGroup.invalid">SAVE</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,23 @@
+<div (click)="cardClick.emit()" class="card">
+  <div class="header">
+    <h3 class="title">{{ well?.name }}</h3>
+    <button (click)="deleteClicked($event)" class="close-btn" mat-icon-button>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="card-content">
+    <div class="symbol" [class.nov-worker]="well?.operator === 'NOV'">
+      {{ well?.operator?.slice(0, 1) }}
+    </div>
+    <div class="info">
+      <div class="item">
+        <span class="label">Operator</span>
+        <span class="item-value">{{ well?.operator }}</span>
+      </div>
+      <div class="item">
+        <span class="label">Location</span>
+        <span class="item-value">{{ well?.location }}</span>
+      </div>
+    </div>
+  </div>
+</div>

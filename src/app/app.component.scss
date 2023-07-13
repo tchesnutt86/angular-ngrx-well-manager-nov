@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu-drawer {
+  width: 200px;
+}
+
+.container {
+  height: 100%;
+
+  .content {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+  }
+}

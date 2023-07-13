@@ -1,0 +1,70 @@
+$card-border-color: gray;
+$card-shadow: 4px 3px 0px rgb(92 54 160 / 54%);
+$card-hover-background: rgb(228, 230, 255);
+$avatar-background: lightgray;
+$nov-background: #ff0000;
+$nov-text-color: #ffffff;
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 12px;
+  border: 1px solid $card-border-color;
+  border-radius: 14px;
+  box-shadow: $card-shadow;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &:hover {
+    background-color: $card-hover-background;
+    cursor: pointer;
+
+    mat-icon {
+      visibility: visible;
+    }
+  }
+
+  .card-content {
+    display: flex;
+    align-items: center;
+
+    .symbol {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+      background: $avatar-background;
+      margin-right: 16px;
+      font-size: 20px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+
+        .item-value {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.nov-worker {
+  background-color: $nov-background !important;
+  color: $nov-text-color;
+}
+
+mat-icon {
+  visibility: hidden;
+}
